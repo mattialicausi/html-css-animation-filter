@@ -67,3 +67,97 @@
     width: 60px;
     height: 20px;
 }
+
+/* ESERCIZIO 1 */
+
+.ex-1-square:hover{
+    background-color: red;
+    transition: background-color 2s;
+
+}
+
+/* ESERCIZIO 2 */
+.ex-2-square:active{
+    width: 300px;
+    transition: width  2s;
+}
+
+/* ESERCIZIO 3 */
+.ex-3-square:hover{
+    border-radius: 50%;
+    transition: border-radius 2s;
+}
+
+/* ESERCIZIO 4 */
+.ex-4-square{
+    opacity: 0;
+    transition: opacity 5s;
+}
+
+/* ESERCIZIO 5 */
+.ex-5-square:hover{
+    width: 400px;
+    height: 400px;
+    transition: width 2s, height 2s;
+}
+.ex-5-square:active{
+    width: 20px;
+    height: 20px;
+    transition: width 2s, height 2s;
+}
+
+/* ESERCIZIO 6 */
+.ex-6-img:hover{
+    -webkit-filter: grayscale(100%);
+    transition: -webkit-filter 3s;
+}
+
+/* ESERCIZIO 7 */
+@keyframes effetti-7{
+    0% {-webkit-filter: none; }
+    10% {-webkit-filter: grayscale(50%);}
+    25% {-webkit-filter: grayscale(100%);}
+    50% {-webkit-filter: blur(40%);}
+    75% {-webkit-filter: blur(80%);}
+    100% {-webkit-filter: none;}
+}
+.ex-7-img:hover{
+    animation-name: effetti-7;
+    animation-duration: 8s;
+}
+
+/* ESERCIZIO 8 */
+@keyframes effetti-8{
+    0% {-webkit-filter: none; }
+    10% {-webkit-filter: grayscale(50%);}
+    25% {-webkit-filter: grayscale(100%);}
+    50% {-webkit-filter: blur(40%);}
+    75% {-webkit-filter: blur(80%);}
+    100% {-webkit-filter: none;}
+}
+.ex-8-img:hover{
+    animation-name: effetti-8;
+    border-radius: 10%;
+    animation-duration: 8s;
+    transition: border-radius 7s;
+}
+
+/* ESERCIZIO 9 */
+
+@keyframes effetti-9{
+    0% {-webkit-filter: none; }
+    10% {-webkit-filter: grayscale(50%);}
+    25% {-webkit-filter: grayscale(100%);}
+    50% {-webkit-filter: blur(40%);}
+    75% {-webkit-filter: blur(80%);}
+    100% {-webkit-filter: none;}
+}
+.ex-9-img:hover{
+    animation-name: effetti-9;
+    border-radius: 10%;
+    width: 200px;
+    animation-duration: 8s;
+    transition: border-radius 7s, width 7s;
+}
+
+/* ESERCIZIO 10 */
