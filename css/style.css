@@ -89,9 +89,9 @@
 }
 
 /* ESERCIZIO 4 */
-.ex-4-square{
+.ex-4-square:hover{
     opacity: 0;
-    transition: opacity 5s;
+    transition: opacity 3s;
 }
 
 /* ESERCIZIO 5 */
@@ -108,19 +108,20 @@
 
 /* ESERCIZIO 6 */
 .ex-6-img:hover{
-    -webkit-filter: grayscale(100%);
-    transition: -webkit-filter 3s;
+    filter: grayscale(100%);
+    transition: filter 3s;
 }
 
 /* ESERCIZIO 7 */
 @keyframes effetti-7{
     0% {-webkit-filter: none; }
-    10% {-webkit-filter: grayscale(50%);}
-    25% {-webkit-filter: grayscale(100%);}
-    50% {-webkit-filter: blur(40%);}
-    75% {-webkit-filter: blur(80%);}
+    10% {-webkit-filter: grayscale(50%)}
+    30%{-webkit-filter: grayscale(100%);}
+    50% {-webkit-filter: invert (50%);}
+    75% {-webkit-filter: invert(100%);}
     100% {-webkit-filter: none;}
 }
+
 .ex-7-img:hover{
     animation-name: effetti-7;
     animation-duration: 8s;
@@ -131,8 +132,8 @@
     0% {-webkit-filter: none; }
     10% {-webkit-filter: grayscale(50%);}
     25% {-webkit-filter: grayscale(100%);}
-    50% {-webkit-filter: blur(40%);}
-    75% {-webkit-filter: blur(80%);}
+    50% {-webkit-filter: blur(50%);}
+    75% {-webkit-filter: blur(100%);}
     100% {-webkit-filter: none;}
 }
 .ex-8-img:hover{
@@ -146,10 +147,10 @@
 
 @keyframes effetti-9{
     0% {-webkit-filter: none; }
-    10% {-webkit-filter: grayscale(50%);}
-    25% {-webkit-filter: grayscale(100%);}
-    50% {-webkit-filter: blur(40%);}
-    75% {-webkit-filter: blur(80%);}
+    10% {-webkit-filter: grayscale(50%)}
+    30%{-webkit-filter: grayscale(100%);}
+    50% {-webkit-filter: invert (50%);}
+    75% {-webkit-filter: invert(100%);}
     100% {-webkit-filter: none;}
 }
 .ex-9-img:hover{
@@ -163,38 +164,127 @@
 /* ESERCIZIO 10 */
 
 .ex-10-icon{
-    transform: rotate(360deg);
-    transition-duration: 10s;
-    transition-timing-function: ease-in-out;
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate{
+    0%{transform: rotate(1turn);}
 }
 
 /* ESERCIZIO 11 */
 
-@keyframes effetti-11{
-    0% {transform: rotate(0deg); }
-    10%{transform: rotate(250deg);}
-    25% {transform: rotate(0deg);}
-    50% {transform: rotate(250deg);}
-    75% {transform: rotate(0deg);}
-    85% {transform: rotate(250deg);}
-    100% {transform: rotate(0deg);}
+@keyframes rotate2{
+    0% {transform: rotate(0deg); 
+    }
+    90% {transform: rotate(260deg);
+    }
+    100%{transform: rotate(0deg);
+    }
+
 }
 .ex-11-icon:hover{
-    animation-name: effetti-11;
-    animation-duration: 6s;
+    animation: rotate2 2s linear infinite;
 }
 
 /* ESERCIZIO 12 */
-.ex-12-button{
-    margin-left: 60px;
-    transition: margin-left 5s;
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: bottom-white 2s linear infinite;
 }
+@keyframes bottom-white {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 80px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+.ex-12-button:hover .ex-12-top-white {
+    animation: top-white 2s linear infinite;
+}
+@keyframes top-white {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 80px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+
 
 /* ESERCIZIO 13 */
+.ex-13-button:hover .ex-13-bottom-white{
 
-.ex-13-button{
-    transform: rotate(360deg);
-    transition: 6s;
+animation: bottom-white2 2s linear;
 }
+@keyframes bottom-white2 {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 30px);
+        bottom: -10px;
+    }
+    45%{ 
+        right:calc(100% - 30px);
+        bottom: 100%;
+    }
+    75‰{
+        right: 0%;
+        bottom: 100%;
+
+    }
+    90%{
+        right: -15px;
+        bottom: -10px;
+
+    }
+    100% {
+        right: 20%;
+        bottom: -10px;
+        
+    }
+}
+
+.ex-13-button:hover .ex-13-top-white{
+
+    animation: top-white2 2s linear;
+    }
+    @keyframes top-white2 {
+        0% {
+            top: -10px;
+            left: 10%;
+        }
+        30% {
+            left: calc(100% - 30px);
+            top: -10px;
+        }
+        45%{ 
+            left:calc(100% - 30px);
+            top: 100%;
+        }
+        75‰{
+            left: 0%;
+            top: 100%;
+    
+        }
+        90%{
+            left: -15px;
+            top: -10px;
+    
+        }
+        100% {
+            left: 10%;
+            top: -10px;
+            
+        }
+    }
+
 
 
